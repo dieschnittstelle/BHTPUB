@@ -24,8 +24,8 @@ public class ReflectedStockItemBuilder implements IStockItemBuilder {
 		try {
 			// obtain the child nodes
 			NodeList children = el.getChildNodes();
-			// iterate over the nodes and populate a map that we will use later
-			Map<String, String> nodes = new HashMap<String, String>();
+			// iterate over the nodes and populate a map of attributes that we will use later for instantiating the java objects
+			Map<String, String> instanceAttributes = new HashMap<String, String>();
 
 			for (int i = 0; i < children.getLength(); i++) {
 				// once we have found an element node we check its name
@@ -37,7 +37,7 @@ public class ReflectedStockItemBuilder implements IStockItemBuilder {
 							.getTagName();
 					logger.debug("found element " + elementName
 							+ " with content: " + elementContent);
-					nodes.put(elementName, elementContent);
+					instanceAttributes.put(elementName, elementContent);
 				} else {
 					// logger.debug("found node " + children.item(i)
 					// + " of class " + children.item(i).getClass());
@@ -46,11 +46,11 @@ public class ReflectedStockItemBuilder implements IStockItemBuilder {
 			
 
 			
-			logger.info("read out child elements and values: " + nodes);
+			logger.info("read out child elements and values: " + instanceAttributes);
 
 			// try to obtain the class given the classname and create an
 			// instance of it
-			Class<?> klass = Class.forName(nodes.get("class"));
+			Class<?> klass = Class.forName(instanceAttributes.get("class"));
 			IStockItem instance = (IStockItem) klass.newInstance();
 
 //			for (Field field : klass.getDeclaredFields()) {
@@ -61,18 +61,18 @@ public class ReflectedStockItemBuilder implements IStockItemBuilder {
 //				System.err.println("found method: " + method.getClass() + " of name " + method.getName());
 //			}
 						
-			instance.initialise(Integer.parseInt(nodes.get("units")),
-					nodes.get("brandname"));
+			instance.initialise(Integer.parseInt(instanceAttributes.get("units")),
+					instanceAttributes.get("brandname"));
 			
 			/**
 			 * fuegen Sie hier die Erweiterungen fuer Uebungsaufgabe BAS1 ein
 			 */
 			
-			nodes.remove("class");
-			nodes.remove("brandname");
-			nodes.remove("units");
+			instanceAttributes.remove("class");
+			instanceAttributes.remove("brandname");
+			instanceAttributes.remove("units");
 
-			for (String key : nodes.keySet()) {
+			for (String key : instanceAttributes.keySet()) {
 				// determine the name of the setter
 				String setterName = "set" + key.substring(0,1).toUpperCase() + key.substring(1);
 				Method setterMethod = null;
@@ -88,14 +88,14 @@ public class ReflectedStockItemBuilder implements IStockItemBuilder {
 				Class<?> type = setterMethod.getParameterTypes()[0];
 				if (type != java.lang.String.class) {
 					if (type == Integer.TYPE) {
-						setterMethod.invoke(instance,Integer.parseInt(nodes.get(key)));
+						setterMethod.invoke(instance,Integer.parseInt(instanceAttributes.get(key)));
 					}
 					else {
 						logger.error("cannot handle type: " + type);
 					}
 				}
 				else {
-					setterMethod.invoke(instance,nodes.get(key));
+					setterMethod.invoke(instance,instanceAttributes.get(key));
 				}
 			}
 			
