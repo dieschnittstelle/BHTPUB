@@ -1,6 +1,7 @@
 package org.dieschnittstelle.jee.esa.basics.reflection.stockitemtypes;
 
 import org.dieschnittstelle.jee.esa.basics.IStockItem;
+import static org.dieschnittstelle.jee.esa.shared.lib.Util.*;		
 
 public class Chocolate implements IStockItem {
 
@@ -11,7 +12,7 @@ public class Chocolate implements IStockItem {
 	private int price;
 	
 	public Chocolate() {
-		
+		show("Chocolate: constructor invoked");
 	}
 	
 	public Chocolate(String brandname) {
@@ -21,6 +22,8 @@ public class Chocolate implements IStockItem {
 	
 	@Override
 	public void initialise(int units,String brandname) {
+		show("Chocolate: intialise() invoked");
+
 		this.units = units;
 		this.brandname = brandname;
 	}
@@ -60,6 +63,8 @@ public class Chocolate implements IStockItem {
 	}
 
 	public void setPrice(int price) {
+		show("Chocolate: setPrice() invoked");
+
 		this.price = price;
 	}
 
