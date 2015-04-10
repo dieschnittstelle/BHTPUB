@@ -18,7 +18,7 @@ public class TouchpointGUIServlet extends HttpServlet {
 			.getLogger(TouchpointGUIServlet.class);
 
 	public TouchpointGUIServlet() {
-		logger.error("TouchpointGUIServlet: constructor invoked\n");
+		System.err.println("TouchpointGUIServlet: constructor invoked\n");
 	}
 
 	@Override
