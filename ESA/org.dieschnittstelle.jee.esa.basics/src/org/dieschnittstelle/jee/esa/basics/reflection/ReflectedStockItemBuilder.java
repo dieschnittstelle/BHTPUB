@@ -9,6 +9,7 @@ import org.dieschnittstelle.jee.esa.basics.IStockItemBuilder;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -116,5 +117,13 @@ public class ReflectedStockItemBuilder implements IStockItemBuilder {
 		} 
 
 	}
+	
+	/*
+	 * create getter/setter names
+	 */
+	public static String getAccessorNameForField(String accessor,String fieldName) {
+		return accessor + fieldName.substring(0,1).toUpperCase() + fieldName.substring(1); 
+	}
+
 
 }
