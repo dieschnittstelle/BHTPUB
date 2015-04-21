@@ -33,6 +33,9 @@ public class Milk implements IStockItem {
 
 	@Override
 	public void purchase(int unitsToPurchase) {
+		
+		show("Milk: purchase() invoked");
+		
 		if (unitsToPurchase > this.units) {
 			throw new RuntimeException(
 					"You cannot purchase more than what is available. Got: "

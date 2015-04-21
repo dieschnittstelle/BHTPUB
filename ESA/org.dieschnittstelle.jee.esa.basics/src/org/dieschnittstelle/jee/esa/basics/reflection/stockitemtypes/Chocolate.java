@@ -1,6 +1,7 @@
 package org.dieschnittstelle.jee.esa.basics.reflection.stockitemtypes;
 
 import org.dieschnittstelle.jee.esa.basics.IStockItem;
+
 import static org.dieschnittstelle.jee.esa.shared.lib.Util.*;		
 
 public class Chocolate implements IStockItem {
@@ -30,6 +31,9 @@ public class Chocolate implements IStockItem {
 
 	@Override
 	public void purchase(int unitsToPurchase) {
+		
+		show("Chocolate: purchase() invoked");
+		
 		if (unitsToPurchase > this.units) {
 			throw new RuntimeException(
 					"You cannot purchase more than what is available. Got: "
