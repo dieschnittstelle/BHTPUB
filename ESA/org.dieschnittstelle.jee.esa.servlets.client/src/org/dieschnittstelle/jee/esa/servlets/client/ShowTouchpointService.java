@@ -138,7 +138,7 @@ public class ShowTouchpointService {
 	 * 
 	 * @param tp
 	 */
-	public static void deleteTouchpoint(AbstractTouchpoint tp) {
+	public void deleteTouchpoint(AbstractTouchpoint tp) {
 		logger.info("deleteTouchpoint(): " + tp);
 
 	}
