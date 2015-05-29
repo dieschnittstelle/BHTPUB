@@ -1,6 +1,5 @@
 <datasources>
-	<!-- MySQL -->
-	<!-- 
+	<!-- MySQL 
 	<datasource jndi-name="java:/crm_erp_DS" pool-name="crm_erp_Pool"
 		enabled="true" use-java-context="true">
 		<connection-url>jdbc:mysql://localhost:3306/crm_erp_db
@@ -10,8 +9,18 @@
 			<user-name>root</user-name>
 			<password></password>
 		</security>
-	</datasource>  -->
-	<!-- in-Memory Datenbank -->
+	</datasource> -->
+	<!-- h2 server -->
+	<datasource jndi-name="java:/crm_erp_DS" pool-name="crm_erp_Pool"
+		enabled="true" use-java-context="true">
+		<connection-url>jdbc:h2:tcp://localhost/~/crm_erp_db</connection-url>
+		<driver>h2</driver>
+  		<security>
+			<user-name>sa</user-name>
+			<password></password>
+		</security>
+	</datasource>	
+	<!-- h2 embedded Datenbank 
 	<datasource jndi-name="java:/crm_erp_DS" pool-name="crm_erp_Pool"
 		enabled="true" use-java-context="true">
 		<connection-url>jdbc:h2:mem:crm_erp_db;DB_CLOSE_DELAY=-1 </connection-url>
@@ -20,5 +29,5 @@
 			<user-name>sa</user-name>
 			<password>sa</password>
 		</security>
-	</datasource>
+	</datasource>  -->
 </datasources>
