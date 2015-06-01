@@ -33,6 +33,7 @@ public class TouchpointAccessClient implements TouchpointAccessRemote {
 	public AbstractTouchpoint createTouchpoint(AbstractTouchpoint touchpoint) {
 		AbstractTouchpoint created = touchpointAccessProxy.createTouchpoint(touchpoint);
 		touchpoint.setId(created.getId());
+		touchpoint.setErpPointOfSaleId(created.getErpPointOfSaleId());
 		
 		return created;
 	}
