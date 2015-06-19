@@ -1,5 +1,7 @@
 package org.dieschnittstelle.jee.esa.erp.ejbs.crud;
 
+import java.util.List;
+
 import javax.ejb.Local;
 
 import org.dieschnittstelle.jee.esa.erp.entities.PointOfSale;
@@ -13,4 +15,7 @@ public interface PointOfSaleCRUDLocal {
 
 	public boolean deletePointOfSale(int posId);
 
+	public List<PointOfSale> readAllPointsOfSale();
+
 }
+

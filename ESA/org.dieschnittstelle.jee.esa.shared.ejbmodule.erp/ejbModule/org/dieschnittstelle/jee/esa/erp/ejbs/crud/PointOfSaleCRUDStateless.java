@@ -1,5 +1,7 @@
 package org.dieschnittstelle.jee.esa.erp.ejbs.crud;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -44,6 +46,11 @@ public class PointOfSaleCRUDStateless implements PointOfSaleCRUDRemote, PointOfS
 	public boolean deletePointOfSale(int posId) {
 		em.remove(em.find(PointOfSale.class,posId));
 		return true;
+	}
+
+	@Override
+	public List<PointOfSale> readAllPointsOfSale() {
+		return em.createQuery("FROM PointOfSale").getResultList();
 	}
 
 }
