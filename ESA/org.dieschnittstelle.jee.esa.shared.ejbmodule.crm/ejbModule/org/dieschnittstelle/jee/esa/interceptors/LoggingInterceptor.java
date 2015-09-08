@@ -27,19 +27,19 @@ public class LoggingInterceptor {
 			return loggers.get(klass);
 		return createNewLogger(klass);
 	}
-	
+
 	private synchronized Logger createNewLogger(Class<?> klass) {
 		logger.info("createNewLogger(): class is: " + klass);
-		
+
 		Logger logger = Logger.getLogger(klass);
 		loggers.put(klass, logger);
-		
+
 		return logger;
 	}
 
-
 	/**
 	 * log a method invocation
+	 * 
 	 * @param context
 	 * @return
 	 * @throws Exception
@@ -76,9 +76,15 @@ public class LoggingInterceptor {
 		 */
 		buf.setLength(0);
 		buf.append(prefix);
-		buf.append(": got return value: ");
-		buf.append(result);
-		
+
+		// check whether we have a void method
+		if (context.getMethod().getReturnType() == Void.TYPE) {
+			buf.append(": returned");
+		} else {
+			buf.append(": got return value: ");
+			buf.append(result);
+		}
+
 		getLogger(context.getTarget().getClass()).info(buf.toString());
 
 		return result;

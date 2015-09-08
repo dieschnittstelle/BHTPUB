@@ -19,6 +19,11 @@ public class ShoppingException extends /*Exception*/ RuntimeException {
 		this.setReason(ShoppingSessionExceptionReason.UNKNOWN);
 	}
 	
+	public ShoppingException(Throwable cause) {
+		super(cause);
+		this.setReason(ShoppingSessionExceptionReason.TECHNICAL_EXCEPTION);
+	}
+	
 	public ShoppingException(String msg) {
 		super(msg);
 		this.setReason(ShoppingSessionExceptionReason.UNKNOWN);
@@ -36,6 +41,11 @@ public class ShoppingException extends /*Exception*/ RuntimeException {
 
 	public ShoppingException(ShoppingSessionExceptionReason reason, String msg) {
 		super(msg);
+		this.setReason(reason);
+	}
+
+	public ShoppingException(ShoppingSessionExceptionReason reason, Throwable cause) {
+		super(cause);
 		this.setReason(reason);
 	}
 

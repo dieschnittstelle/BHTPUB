@@ -48,11 +48,14 @@ public class TestStockSystem {
 		stockSystemClient.addToStock(PRODUCT_2, TOUCHPOINT_1.getErpPointOfSaleId(), 50);
 		stockSystemClient.addToStock(PRODUCT_1, TOUCHPOINT_2.getErpPointOfSaleId(), 75);
 		
-		assertEquals("add/read correct for p1/tp1", 100, stockSystemClient.getUnitsOnStock(PRODUCT_1, TOUCHPOINT_1.getErpPointOfSaleId()));
-		assertEquals("add/read correct for p2/tp1", 50, stockSystemClient.getUnitsOnStock(PRODUCT_2, TOUCHPOINT_1.getErpPointOfSaleId()));
-		assertEquals("add/read correct for p1/tp2", 75, stockSystemClient.getUnitsOnStock(PRODUCT_1, TOUCHPOINT_2.getErpPointOfSaleId()));
+		assertEquals("create/read correct for p1/tp1", 100, stockSystemClient.getUnitsOnStock(PRODUCT_1, TOUCHPOINT_1.getErpPointOfSaleId()));
+		assertEquals("create/read correct for p2/tp1", 50, stockSystemClient.getUnitsOnStock(PRODUCT_2, TOUCHPOINT_1.getErpPointOfSaleId()));
+		assertEquals("create/read correct for p1/tp2", 75, stockSystemClient.getUnitsOnStock(PRODUCT_1, TOUCHPOINT_2.getErpPointOfSaleId()));
+
+		stockSystemClient.addToStock(PRODUCT_1, TOUCHPOINT_1.getErpPointOfSaleId(), 5);
+		assertEquals("update/read correct for p1/tp1", 105, stockSystemClient.getUnitsOnStock(PRODUCT_1, TOUCHPOINT_1.getErpPointOfSaleId()));
 		
-		stockSystemClient.removeFromStock(PRODUCT_1, TOUCHPOINT_1.getErpPointOfSaleId(), 5);
+		stockSystemClient.removeFromStock(PRODUCT_1, TOUCHPOINT_1.getErpPointOfSaleId(), 10);
 		assertEquals("remove correct for p1/tp1", 95, stockSystemClient.getUnitsOnStock(PRODUCT_1, TOUCHPOINT_1.getErpPointOfSaleId()));
 
 		// read out all products on stock for tp1 and tp2 and check whether size and content is correct
