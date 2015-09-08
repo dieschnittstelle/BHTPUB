@@ -15,7 +15,7 @@ public class CampaignExecution implements Serializable {
 
 	private AbstractTouchpoint touchpoint;
 
-	private int erpCampaignId;
+	private long erpCampaignId;
 
 	private int units;
 
@@ -27,7 +27,7 @@ public class CampaignExecution implements Serializable {
 		return touchpoint;
 	}
 
-	public int getErpCampaignId() {
+	public long getErpCampaignId() {
 		return erpCampaignId;
 	}
 
@@ -52,7 +52,7 @@ public class CampaignExecution implements Serializable {
 	 */
 	private int unitsLeft;
 
-	public CampaignExecution(AbstractTouchpoint touchpoint, int erpCampaignId,
+	public CampaignExecution(AbstractTouchpoint touchpoint, long erpCampaignId,
 			int units, long duration) {
 		this.touchpoint = touchpoint;
 		this.erpCampaignId = erpCampaignId;

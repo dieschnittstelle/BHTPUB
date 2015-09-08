@@ -21,18 +21,18 @@ public class StockSystemClient implements StockSystemRemote {
 	
 	
 	@Override
-	public void addToStock(IndividualisedProductItem product, int pointOfSaleId, int units) {
+	public void addToStock(IndividualisedProductItem product, long pointOfSaleId, int units) {
 		//this.proxy.addToStock(product, pointOfSaleId, units);
 	}
 
 	@Override
-	public void removeFromStock(IndividualisedProductItem product, int pointOfSaleId,
+	public void removeFromStock(IndividualisedProductItem product, long pointOfSaleId,
 			int units) {
 		//this.proxy.removeFromStock(product, pointOfSaleId, units);
 	}
 
 	@Override
-	public List<IndividualisedProductItem> getProductsOnStock(int pointOfSaleId) {
+	public List<IndividualisedProductItem> getProductsOnStock(long pointOfSaleId) {
 		//return this.proxy.getProductsOnStock(pointOfSaleId);
 		return null;
 	}
@@ -44,7 +44,7 @@ public class StockSystemClient implements StockSystemRemote {
 	}
 
 	@Override
-	public int getUnitsOnStock(IndividualisedProductItem product, int pointOfSaleId) {
+	public int getUnitsOnStock(IndividualisedProductItem product, long pointOfSaleId) {
 		//return this.proxy.getUnitsOnStock(product, pointOfSaleId);
 		return 0;
 	}

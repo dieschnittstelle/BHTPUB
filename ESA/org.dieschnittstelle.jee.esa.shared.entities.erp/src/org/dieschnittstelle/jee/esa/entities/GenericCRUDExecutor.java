@@ -66,7 +66,7 @@ public class GenericCRUDExecutor<T extends GenericCRUDEntity> {
 	/**
 	 * delete an object given its id
 	 */
-	public boolean deleteObject(final int toDeleteId) {
+	public boolean deleteObject(final long toDeleteId) {
 		System.out.println("deleteObject(): " + toDeleteId);
 
 		try {
@@ -172,7 +172,7 @@ public class GenericCRUDExecutor<T extends GenericCRUDEntity> {
 	/*
 	 * read an object given its id
 	 */
-	public T readObject(int i) {
+	public T readObject(long i) {
 		System.out.println("readObject(): " + i);
 		
 		for (T obj : this.objects) {

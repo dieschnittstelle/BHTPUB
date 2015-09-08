@@ -35,7 +35,7 @@ public class CustomerTransaction implements Serializable {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private long id;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date;
@@ -68,11 +68,11 @@ public class CustomerTransaction implements Serializable {
 		this.date = new Date();
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

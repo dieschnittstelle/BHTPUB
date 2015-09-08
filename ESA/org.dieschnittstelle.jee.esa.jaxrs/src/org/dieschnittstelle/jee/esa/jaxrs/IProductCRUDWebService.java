@@ -31,11 +31,11 @@ public interface IProductCRUDWebService {
 
 	public List<IndividualisedProductItem> readAllProducts();
 
-	public IndividualisedProductItem updateProduct(int id,
+	public IndividualisedProductItem updateProduct(long id,
 			IndividualisedProductItem update);
 
-	boolean deleteProduct(int id);
+	boolean deleteProduct(long id);
 
-	public IndividualisedProductItem readProduct(int id);
+	public IndividualisedProductItem readProduct(long id);
 			
 }

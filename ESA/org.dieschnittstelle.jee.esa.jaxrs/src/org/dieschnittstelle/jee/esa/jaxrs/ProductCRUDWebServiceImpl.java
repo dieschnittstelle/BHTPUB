@@ -31,20 +31,20 @@ public class ProductCRUDWebServiceImpl implements IProductCRUDWebService {
 	}
 
 	@Override
-	public IndividualisedProductItem updateProduct(int id,
+	public IndividualisedProductItem updateProduct(long id,
 			IndividualisedProductItem update) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean deleteProduct(int id) {
+	public boolean deleteProduct(long id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public IndividualisedProductItem readProduct(int id) {
+	public IndividualisedProductItem readProduct(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

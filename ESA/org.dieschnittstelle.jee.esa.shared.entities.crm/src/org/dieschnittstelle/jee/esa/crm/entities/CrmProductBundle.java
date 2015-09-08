@@ -33,9 +33,9 @@ public class CrmProductBundle implements Serializable {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private long id;
 
-	private int erpProductId;
+	private long erpProductId;
 
 	private int units;
 
@@ -48,21 +48,21 @@ public class CrmProductBundle implements Serializable {
 		logger.info("<constructor>");
 	}
 	
-	public CrmProductBundle(int erpProductId, int units) {
+	public CrmProductBundle(long erpProductId, int units) {
 		this(erpProductId, units, false);
 	}
 
-	public CrmProductBundle(int erpProductId, int units, boolean isCampaign) {
+	public CrmProductBundle(long erpProductId, int units, boolean isCampaign) {
 		this.erpProductId = erpProductId;
 		this.units = units;
 		this.isCampaign = isCampaign;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public int getErpProductId() {
+	public long getErpProductId() {
 		return erpProductId;
 	}
 

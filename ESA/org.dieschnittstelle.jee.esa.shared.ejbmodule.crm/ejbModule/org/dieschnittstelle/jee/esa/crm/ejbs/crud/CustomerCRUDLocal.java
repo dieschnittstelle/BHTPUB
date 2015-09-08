@@ -9,7 +9,7 @@ public interface CustomerCRUDLocal {
 	
 	public Customer createCustomer(Customer customer);
 
-	public Customer readCustomer(int id);
+	public Customer readCustomer(long id);
 
 	public Customer updateCustomer(Customer customer);
 		

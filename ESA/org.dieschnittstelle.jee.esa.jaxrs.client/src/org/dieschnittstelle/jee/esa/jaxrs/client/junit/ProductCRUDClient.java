@@ -50,11 +50,11 @@ public class ProductCRUDClient {
 		return proxy.updateProduct(update.getId(),(IndividualisedProductItem)update);
 	}
 
-	public boolean deleteProduct(int id) {
+	public boolean deleteProduct(long id) {
 		return proxy.deleteProduct(id);
 	}
 
-	public AbstractProduct readProduct(int id) {
+	public AbstractProduct readProduct(long id) {
 		return proxy.readProduct(id);
 	}
 

@@ -72,7 +72,7 @@ public class TestStockSystem {
 			
 		assertEquals("number of touchpoints correct for p1",2,touchpoints_p1.size());
 		assertEquals("number of touchpoints correct for p2",1,touchpoints_p2.size());
-		assertTrue("touchpoint correct for p2", touchpoints_p2.contains(new Integer(TOUCHPOINT_1.getErpPointOfSaleId())));
+		assertTrue("touchpoint correct for p2", touchpoints_p2.contains(new Long(TOUCHPOINT_1.getErpPointOfSaleId())));
 		
 }
 	

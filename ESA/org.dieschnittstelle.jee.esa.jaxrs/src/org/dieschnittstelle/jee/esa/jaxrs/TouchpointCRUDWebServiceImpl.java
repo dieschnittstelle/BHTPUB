@@ -45,7 +45,7 @@ public class TouchpointCRUDWebServiceImpl implements ITouchpointCRUDWebService {
 	}
 
 	@Override
-	public boolean deleteTouchpoint(int id) {
+	public boolean deleteTouchpoint(long id) {
 		return this.touchpointCRUD.deleteObject(id);	
 	}
 

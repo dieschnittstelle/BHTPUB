@@ -16,7 +16,7 @@ public abstract class AbstractProduct implements Serializable, GenericCRUDEntity
 	 */
 	private static final long serialVersionUID = 6940403029597060153L;
 
-	private int id;
+	private long id;
 
 	private String name;
 	
@@ -30,11 +30,11 @@ public abstract class AbstractProduct implements Serializable, GenericCRUDEntity
 		this.name = name;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

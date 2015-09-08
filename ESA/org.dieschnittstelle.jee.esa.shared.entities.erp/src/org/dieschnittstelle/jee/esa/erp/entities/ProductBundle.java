@@ -12,7 +12,7 @@ public class ProductBundle implements Serializable {
 	 */
 	private static final long serialVersionUID = 1501911067906145681L;
 
-	private int id;
+	private long id;
 
 	private IndividualisedProductItem product;
 
@@ -46,11 +46,11 @@ public class ProductBundle implements Serializable {
 		return "{" + this.product + " (" + this.units + ")}";
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

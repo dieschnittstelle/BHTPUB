@@ -11,7 +11,7 @@ public interface TouchpointCRUDRemote {
 	
 	public AbstractTouchpoint createTouchpoint(AbstractTouchpoint Touchpoint);
 
-	public AbstractTouchpoint readTouchpoint(int id);
+	public AbstractTouchpoint readTouchpoint(long id);
 
 	public List<AbstractTouchpoint> readAllTouchpoints();
 	

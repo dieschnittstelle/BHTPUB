@@ -12,10 +12,10 @@ public interface CampaignTrackingRemote {
 
 	public void addCampaignExecution(CampaignExecution campaign);
 	
-	public int existsValidCampaignExecutionAtTouchpoint(int erpProductId,
+	public int existsValidCampaignExecutionAtTouchpoint(long erpProductId,
 			AbstractTouchpoint tp);
 	
-	public void purchaseCampaignAtTouchpoint(int erpProductId,
+	public void purchaseCampaignAtTouchpoint(long erpProductId,
 			AbstractTouchpoint tp, int units);
 	
 	public List<CampaignExecution> getAllCampaignExecutions();

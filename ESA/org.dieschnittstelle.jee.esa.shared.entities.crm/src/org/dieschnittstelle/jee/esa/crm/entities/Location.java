@@ -30,7 +30,7 @@ public class Location implements Serializable {
 	 */
 	private static final long serialVersionUID = -131090102062445239L;
 
-	private int id;
+	private long id;
 	
 	private long geoLat;
 	
@@ -38,11 +38,11 @@ public class Location implements Serializable {
 	
 	@Id
 	@GeneratedValue
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

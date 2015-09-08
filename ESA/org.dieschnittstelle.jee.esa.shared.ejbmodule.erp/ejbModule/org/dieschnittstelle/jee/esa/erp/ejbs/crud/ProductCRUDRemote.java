@@ -12,8 +12,8 @@ public interface ProductCRUDRemote {
 
 	public AbstractProduct updateProduct(AbstractProduct update);
 
-	public AbstractProduct readProduct(int productID);
+	public AbstractProduct readProduct(long productID);
 
-	public boolean deleteProduct(int productID);
+	public boolean deleteProduct(long productID);
 
 }

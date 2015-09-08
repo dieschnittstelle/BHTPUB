@@ -13,7 +13,7 @@ public interface StockSystemRemote {
 		 * @param pointOfSaleId
 		 * @param units
 		 */
-		public void addToStock(IndividualisedProductItem product,int pointOfSaleId,int units);
+		public void addToStock(IndividualisedProductItem product,long pointOfSaleId,int units);
 
 		/**
 		 * removes some units of a product from the stock of a point of sale
@@ -22,7 +22,7 @@ public interface StockSystemRemote {
 		 * @param pointOfSaleId
 		 * @param units
 		 */
-		public void removeFromStock(IndividualisedProductItem product,int pointOfSaleId,int units);
+		public void removeFromStock(IndividualisedProductItem product,long pointOfSaleId,int units);
 		
 		/**
 		 * returns all products on stock of some pointOfSale
@@ -30,7 +30,7 @@ public interface StockSystemRemote {
 		 * @param pointOfSaleId
 		 * @return
 		 */
-		public List<IndividualisedProductItem> getProductsOnStock(int pointOfSaleId);
+		public List<IndividualisedProductItem> getProductsOnStock(long pointOfSaleId);
 
 		/**
 		 * returns all products on stock
@@ -46,7 +46,7 @@ public interface StockSystemRemote {
 		 * @param pointOfSaleId
 		 * @return
 		 */
-		public int getUnitsOnStock(IndividualisedProductItem product, int pointOfSaleId);
+		public int getUnitsOnStock(IndividualisedProductItem product, long pointOfSaleId);
 
 		/**
 		 * returns the total number of units on stock for some product

@@ -31,7 +31,7 @@ public class CustomerCRUDStateless implements CustomerCRUDRemote, CustomerCRUDLo
 	}
 
 	@Override
-	public Customer readCustomer(int id) {
+	public Customer readCustomer(long id) {
 		logger.info("readCustomer(): " + id);
 
 		Customer customer = em.find(Customer.class, id);

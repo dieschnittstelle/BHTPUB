@@ -1,6 +1,5 @@
 package org.dieschnittstelle.jee.esa.erp.entities;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.ManyToOne;
@@ -23,11 +22,11 @@ public class StockItem {
 	protected static Logger logger = Logger.getLogger(StockItem.class);
 
 	@Id
-	@ManyToOne(cascade = CascadeType.MERGE)
+	@ManyToOne
 	private PointOfSale pos;
 
 	@Id
-	@ManyToOne(cascade = CascadeType.MERGE)
+	@ManyToOne
 	private IndividualisedProductItem product;
 
 	private int price;

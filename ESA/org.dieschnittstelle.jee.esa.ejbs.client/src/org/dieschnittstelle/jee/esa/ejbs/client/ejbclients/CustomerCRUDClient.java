@@ -35,7 +35,7 @@ public class CustomerCRUDClient implements CustomerCRUDRemote {
 	}
 
 	@Override
-	public Customer readCustomer(int id) {
+	public Customer readCustomer(long id) {
 		return proxy.readCustomer(id);
 	}
 

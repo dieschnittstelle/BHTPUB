@@ -32,7 +32,7 @@ public class CampaignTrackingSingleton implements CampaignTrackingRemote {
 	 * for each touchpoint id there may only exist a single campaign execution
 	 * for a given campaign id)
 	 */
-	private Map<Integer, Map<Integer, CampaignExecution>> campaignExecutionsAtTouchpoint = new HashMap<Integer, Map<Integer, CampaignExecution>>();
+	private Map<Long, Map<Long, CampaignExecution>> campaignExecutionsAtTouchpoint = new HashMap<Long, Map<Long, CampaignExecution>>();
 
 	public CampaignTrackingSingleton() {
 		logger.info("<constructor>: " + this);
@@ -48,7 +48,7 @@ public class CampaignTrackingSingleton implements CampaignTrackingRemote {
 		if (!this.campaignExecutionsAtTouchpoint.containsKey(campaign
 				.getTouchpoint().getId())) {
 			this.campaignExecutionsAtTouchpoint.put(campaign.getTouchpoint()
-					.getId(), new HashMap<Integer, CampaignExecution>());
+					.getId(), new HashMap<Long, CampaignExecution>());
 		}
 		this.campaignExecutionsAtTouchpoint.get(
 				campaign.getTouchpoint().getId()).put(
@@ -61,11 +61,11 @@ public class CampaignTrackingSingleton implements CampaignTrackingRemote {
 	 */
 	@javax.ejb.Lock(javax.ejb.LockType.READ)
 	@javax.ejb.AccessTimeout(value=5,unit=java.util.concurrent.TimeUnit.SECONDS)
-	public int existsValidCampaignExecutionAtTouchpoint(int erpProductId,
+	public int existsValidCampaignExecutionAtTouchpoint(long erpProductId,
 			AbstractTouchpoint tp) {
 		logger.info("existsValidCampaignExecutionAtTouchpoint(): " + erpProductId + "@" + tp);
 
-		Map<Integer, CampaignExecution> campaignExecutions = this.campaignExecutionsAtTouchpoint
+		Map<Long, CampaignExecution> campaignExecutions = this.campaignExecutionsAtTouchpoint
 				.get(tp.getId());
 		if (campaignExecutions == null) {
 			logger.warn("no CampaignExecution found for touchpoint " + tp + " in " + this.campaignExecutionsAtTouchpoint);
@@ -88,7 +88,7 @@ public class CampaignTrackingSingleton implements CampaignTrackingRemote {
 	 * purchase some units of some campaign at some touchpoint
 	 */
 	@javax.ejb.Lock(javax.ejb.LockType.WRITE)
-	public void purchaseCampaignAtTouchpoint(int erpProductId,
+	public void purchaseCampaignAtTouchpoint(long erpProductId,
 			AbstractTouchpoint tp, int units) {
 		logger.info("purchaseCampaignAtTouchpoint(): " + erpProductId + "@" + tp + ":" + units);
 		
@@ -98,8 +98,8 @@ public class CampaignTrackingSingleton implements CampaignTrackingRemote {
 	
 	public List<CampaignExecution> getAllCampaignExecutions() {
 		List<CampaignExecution> campaigns = new ArrayList<CampaignExecution>();
-		for (int tpid : campaignExecutionsAtTouchpoint.keySet()) {
-			for (int cpid : campaignExecutionsAtTouchpoint.get(tpid).keySet()) {
+		for (long tpid : campaignExecutionsAtTouchpoint.keySet()) {
+			for (long cpid : campaignExecutionsAtTouchpoint.get(tpid).keySet()) {
 				campaigns.add(campaignExecutionsAtTouchpoint.get(tpid).get(cpid));
 			}
 		}

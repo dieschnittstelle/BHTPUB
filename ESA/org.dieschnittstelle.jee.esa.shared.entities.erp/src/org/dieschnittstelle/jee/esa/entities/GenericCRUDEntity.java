@@ -7,8 +7,8 @@ public interface GenericCRUDEntity extends Serializable {
 	/*
 	 * obtain an id
 	 */
-	public int getId();
+	public long getId();
 	
-	public void setId(int id);
+	public void setId(long id);
 	
 }

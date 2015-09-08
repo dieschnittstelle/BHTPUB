@@ -48,7 +48,7 @@ public class TouchpointCRUDStateless implements TouchpointCRUDRemote,
 	}
 
 	@Override
-	public AbstractTouchpoint readTouchpoint(int id) {
+	public AbstractTouchpoint readTouchpoint(long id) {
 		logger.info("readTouchpoint(): " + id);
 
 		AbstractTouchpoint touchpoint = em.find(AbstractTouchpoint.class, id);

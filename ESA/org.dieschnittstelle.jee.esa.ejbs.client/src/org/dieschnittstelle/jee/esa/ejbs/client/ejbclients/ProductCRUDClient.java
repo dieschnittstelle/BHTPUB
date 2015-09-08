@@ -43,12 +43,12 @@ public class ProductCRUDClient implements ProductCRUDRemote {
 		return null;
 	}
 
-	public AbstractProduct readProduct(int productID) {
+	public AbstractProduct readProduct(long productID) {
 //		return proxy.readProduct(productID);
 		return null;
 	}
 
-	public boolean deleteProduct(int productID) {
+	public boolean deleteProduct(long productID) {
 //		return proxy.deleteProduct(productID);
 		return false;
 	}

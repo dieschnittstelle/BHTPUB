@@ -58,12 +58,12 @@ public abstract class AbstractTouchpoint implements Serializable, GenericCRUDEnt
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "touchpoint_sequence")
-	protected int id;
+	protected long id;
 
 	/**
 	 * the id of the PointOfSale from the erp data
 	 */
-	protected int erpPointOfSaleId;
+	protected long erpPointOfSaleId;
 
 	/**
 	 * the name of the touchpoint
@@ -88,19 +88,19 @@ public abstract class AbstractTouchpoint implements Serializable, GenericCRUDEnt
 
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
-	public int getErpPointOfSaleId() {
+	public long getErpPointOfSaleId() {
 		return erpPointOfSaleId;
 	}
 
-	public void setErpPointOfSaleId(int erpPointOfSaleId) {
+	public void setErpPointOfSaleId(long erpPointOfSaleId) {
 		this.erpPointOfSaleId = erpPointOfSaleId;
 	}
 

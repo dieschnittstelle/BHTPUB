@@ -26,13 +26,13 @@ public class CampaignTrackingClient implements CampaignTrackingRemote {
 	}
 
 	@Override
-	public int existsValidCampaignExecutionAtTouchpoint(int erpProductId,
+	public int existsValidCampaignExecutionAtTouchpoint(long erpProductId,
 			AbstractTouchpoint tp) {
 		return proxy.existsValidCampaignExecutionAtTouchpoint(erpProductId, tp);
 	}
 
 	@Override
-	public void purchaseCampaignAtTouchpoint(int erpProductId,
+	public void purchaseCampaignAtTouchpoint(long erpProductId,
 			AbstractTouchpoint tp, int units) {
 		proxy.purchaseCampaignAtTouchpoint(erpProductId, tp, units);
 	}

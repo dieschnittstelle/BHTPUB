@@ -8,8 +8,8 @@ public interface PointOfSaleCRUDRemote {
 
 	public PointOfSale createPointOfSale(PointOfSale pos);
 
-	public PointOfSale readPointOfSale(int posId);
+	public PointOfSale readPointOfSale(long posId);
 
-	public boolean deletePointOfSale(int posId);
+	public boolean deletePointOfSale(long posId);
 
 }
