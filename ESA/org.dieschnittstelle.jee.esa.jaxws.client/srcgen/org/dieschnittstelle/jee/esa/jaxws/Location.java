@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for location complex type.
+ * <p>Java-Klasse für location complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="location">
@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="geoLat" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="geoLong" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,10 +41,10 @@ public class Location {
 
     protected long geoLat;
     protected long geoLong;
-    protected int id;
+    protected long id;
 
     /**
-     * Gets the value of the geoLat property.
+     * Ruft den Wert der geoLat-Eigenschaft ab.
      * 
      */
     public long getGeoLat() {
@@ -52,7 +52,7 @@ public class Location {
     }
 
     /**
-     * Sets the value of the geoLat property.
+     * Legt den Wert der geoLat-Eigenschaft fest.
      * 
      */
     public void setGeoLat(long value) {
@@ -60,7 +60,7 @@ public class Location {
     }
 
     /**
-     * Gets the value of the geoLong property.
+     * Ruft den Wert der geoLong-Eigenschaft ab.
      * 
      */
     public long getGeoLong() {
@@ -68,7 +68,7 @@ public class Location {
     }
 
     /**
-     * Sets the value of the geoLong property.
+     * Legt den Wert der geoLong-Eigenschaft fest.
      * 
      */
     public void setGeoLong(long value) {
@@ -76,18 +76,18 @@ public class Location {
     }
 
     /**
-     * Gets the value of the id property.
+     * Ruft den Wert der id-Eigenschaft ab.
      * 
      */
-    public int getId() {
+    public long getId() {
         return id;
     }
 
     /**
-     * Sets the value of the id property.
+     * Legt den Wert der id-Eigenschaft fest.
      * 
      */
-    public void setId(int value) {
+    public void setId(long value) {
         this.id = value;
     }
 

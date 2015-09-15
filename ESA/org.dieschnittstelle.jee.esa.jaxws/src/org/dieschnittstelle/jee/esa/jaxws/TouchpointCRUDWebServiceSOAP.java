@@ -18,7 +18,7 @@ import org.dieschnittstelle.jee.esa.entities.GenericCRUDExecutor;
 import org.jboss.logging.Logger;
 
 @WebService(targetNamespace = "http://dieschnittstelle.org/jee/esa/jaxws", serviceName = "TouchpointCRUDWebService")
-@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
+@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.WRAPPED)
 public class TouchpointCRUDWebServiceSOAP {
 
 	protected static Logger logger = Logger
@@ -86,7 +86,7 @@ public class TouchpointCRUDWebServiceSOAP {
 	}
 
 	@WebMethod
-	public boolean deleteTouchpoint(int id) {
+	public boolean deleteTouchpoint(long id) {
 		// obtain the CRUD executor from the servlet context
 		GenericCRUDExecutor<AbstractTouchpoint> touchpointCRUD = (GenericCRUDExecutor<AbstractTouchpoint>) ((ServletContext) wscontext
 				.getMessageContext().get(MessageContext.SERVLET_CONTEXT))

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for address complex type.
+ * <p>Java-Klasse für address complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="address">
@@ -45,7 +45,7 @@ public class Address
     protected String zipCode;
 
     /**
-     * Gets the value of the city property.
+     * Ruft den Wert der city-Eigenschaft ab.
      * 
      * @return
      *     possible object is
@@ -57,7 +57,7 @@ public class Address
     }
 
     /**
-     * Sets the value of the city property.
+     * Legt den Wert der city-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
@@ -69,7 +69,7 @@ public class Address
     }
 
     /**
-     * Gets the value of the houseNr property.
+     * Ruft den Wert der houseNr-Eigenschaft ab.
      * 
      * @return
      *     possible object is
@@ -81,7 +81,7 @@ public class Address
     }
 
     /**
-     * Sets the value of the houseNr property.
+     * Legt den Wert der houseNr-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
@@ -93,7 +93,7 @@ public class Address
     }
 
     /**
-     * Gets the value of the street property.
+     * Ruft den Wert der street-Eigenschaft ab.
      * 
      * @return
      *     possible object is
@@ -105,7 +105,7 @@ public class Address
     }
 
     /**
-     * Sets the value of the street property.
+     * Legt den Wert der street-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
@@ -117,7 +117,7 @@ public class Address
     }
 
     /**
-     * Gets the value of the zipCode property.
+     * Ruft den Wert der zipCode-Eigenschaft ab.
      * 
      * @return
      *     possible object is
@@ -129,7 +129,7 @@ public class Address
     }
 
     /**
-     * Sets the value of the zipCode property.
+     * Legt den Wert der zipCode-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is

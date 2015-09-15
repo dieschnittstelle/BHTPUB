@@ -29,7 +29,7 @@ public class ShowTouchpointSOAPService {
 
 			// 1) read out all touchpoints
 			List<AbstractTouchpoint> touchpoints = serviceOperations
-					.readAllTouchpoints().getItem();
+					.readAllTouchpoints();
 			logger.info("read touchpoints: " + touchpoints);
 
 			// 2) delete the touchpoint after next console input

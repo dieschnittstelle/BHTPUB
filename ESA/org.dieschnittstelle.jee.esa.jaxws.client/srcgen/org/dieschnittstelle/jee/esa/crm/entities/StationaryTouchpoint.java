@@ -8,9 +8,9 @@ import org.dieschnittstelle.jee.esa.jaxws.Address;
 
 
 /**
- * <p>Java class for stationaryTouchpoint complex type.
+ * <p>Java-Klasse für stationaryTouchpoint complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="stationaryTouchpoint">
@@ -37,7 +37,7 @@ public class StationaryTouchpoint
     protected Address location;
 
     /**
-     * Gets the value of the location property.
+     * Ruft den Wert der location-Eigenschaft ab.
      * 
      * @return
      *     possible object is
@@ -49,7 +49,7 @@ public class StationaryTouchpoint
     }
 
     /**
-     * Sets the value of the location property.
+     * Legt den Wert der location-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is

@@ -1,31 +1,26 @@
 
 package org.dieschnittstelle.jee.esa.crm.entities;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
-import org.dieschnittstelle.jee.esa.jaxws.CustomerTransaction;
 import org.dieschnittstelle.jee.esa.jaxws.MobileTouchpoint;
 
 
 /**
- * <p>Java class for abstractTouchpoint complex type.
+ * <p>Java-Klasse für abstractTouchpoint complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="abstractTouchpoint">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="erpPointOfSaleId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="erpPointOfSaleId" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="transactions" type="{http://dieschnittstelle.org/jee/esa/jaxws}customerTransaction" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,8 +33,7 @@ import org.dieschnittstelle.jee.esa.jaxws.MobileTouchpoint;
 @XmlType(name = "abstractTouchpoint", propOrder = {
     "id",
     "erpPointOfSaleId",
-    "name",
-    "transactions"
+    "name"
 })
 @XmlSeeAlso({
     MobileTouchpoint.class,
@@ -47,46 +41,44 @@ import org.dieschnittstelle.jee.esa.jaxws.MobileTouchpoint;
 })
 public abstract class AbstractTouchpoint {
 
-    protected int id;
-    protected int erpPointOfSaleId;
+    protected long id;
+    protected long erpPointOfSaleId;
     protected String name;
-    @XmlElement(nillable = true)
-    protected List<CustomerTransaction> transactions;
 
     /**
-     * Gets the value of the id property.
+     * Ruft den Wert der id-Eigenschaft ab.
      * 
      */
-    public int getId() {
+    public long getId() {
         return id;
     }
 
     /**
-     * Sets the value of the id property.
+     * Legt den Wert der id-Eigenschaft fest.
      * 
      */
-    public void setId(int value) {
+    public void setId(long value) {
         this.id = value;
     }
 
     /**
-     * Gets the value of the erpPointOfSaleId property.
+     * Ruft den Wert der erpPointOfSaleId-Eigenschaft ab.
      * 
      */
-    public int getErpPointOfSaleId() {
+    public long getErpPointOfSaleId() {
         return erpPointOfSaleId;
     }
 
     /**
-     * Sets the value of the erpPointOfSaleId property.
+     * Legt den Wert der erpPointOfSaleId-Eigenschaft fest.
      * 
      */
-    public void setErpPointOfSaleId(int value) {
+    public void setErpPointOfSaleId(long value) {
         this.erpPointOfSaleId = value;
     }
 
     /**
-     * Gets the value of the name property.
+     * Ruft den Wert der name-Eigenschaft ab.
      * 
      * @return
      *     possible object is
@@ -98,7 +90,7 @@ public abstract class AbstractTouchpoint {
     }
 
     /**
-     * Sets the value of the name property.
+     * Legt den Wert der name-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
@@ -107,35 +99,6 @@ public abstract class AbstractTouchpoint {
      */
     public void setName(String value) {
         this.name = value;
-    }
-
-    /**
-     * Gets the value of the transactions property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the transactions property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getTransactions().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link CustomerTransaction }
-     * 
-     * 
-     */
-    public List<CustomerTransaction> getTransactions() {
-        if (transactions == null) {
-            transactions = new ArrayList<CustomerTransaction>();
-        }
-        return this.transactions;
     }
 
 }

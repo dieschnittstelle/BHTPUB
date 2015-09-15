@@ -30,14 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AbstractTouchpointArray }
-     * 
-     */
-    public AbstractTouchpointArray createAbstractTouchpointArray() {
-        return new AbstractTouchpointArray();
-    }
-
-    /**
      * Create an instance of {@link StationaryTouchpoint }
      * 
      */

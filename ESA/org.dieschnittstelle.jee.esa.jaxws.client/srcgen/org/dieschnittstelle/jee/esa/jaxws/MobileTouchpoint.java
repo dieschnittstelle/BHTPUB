@@ -11,9 +11,9 @@ import org.dieschnittstelle.jee.esa.crm.entities.AbstractTouchpoint;
 
 
 /**
- * <p>Java class for mobileTouchpoint complex type.
+ * <p>Java-Klasse für mobileTouchpoint complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="mobileTouchpoint">
