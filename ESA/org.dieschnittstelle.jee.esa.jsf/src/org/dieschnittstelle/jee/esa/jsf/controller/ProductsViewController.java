@@ -84,7 +84,7 @@ public class ProductsViewController {
 		// add the product to the cart
 		logProductBundleKlass();
 		
-		AbstractProduct product = findProduct(Integer.parseInt(id));
+		AbstractProduct product = findProduct(Long.parseLong(id));
 		CrmProductBundle productBundle = new CrmProductBundle(product.getId(),
 				1);
 		productBundle.setProductObj(product);
@@ -121,7 +121,7 @@ public class ProductsViewController {
 	 * @param id
 	 * @return
 	 */
-	private AbstractProduct findProduct(int id) {
+	private AbstractProduct findProduct(long id) {
 		for (AbstractProduct prod : this.products) {
 			if (prod.getId() == id)
 				return prod;

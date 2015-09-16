@@ -8,9 +8,6 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.SessionScoped;
 import javax.faces.component.UICommand;
 import javax.faces.component.UIComponent;
 import javax.faces.component.UISelectBoolean;
@@ -21,9 +18,7 @@ import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.event.ValueChangeEvent;
 
 import org.dieschnittstelle.jee.esa.crm.ejbs.TouchpointAccessLocal;
-import org.dieschnittstelle.jee.esa.crm.ejbs.TouchpointAccessRemote;
 import org.dieschnittstelle.jee.esa.crm.ejbs.crud.CustomerCRUDLocal;
-import org.dieschnittstelle.jee.esa.crm.ejbs.crud.CustomerCRUDRemote;
 import org.dieschnittstelle.jee.esa.crm.entities.AbstractTouchpoint;
 import org.dieschnittstelle.jee.esa.crm.entities.Customer;
 import org.dieschnittstelle.jee.esa.jsf.model.ShoppingCartModel;
@@ -207,7 +202,7 @@ public class ShoppingSessionViewController {
 		logger.info("validateUnitsUpdate(): attributes are: " + attributes);
 		// the id of the product to be updated can be obtained from the
 		// attributes on the UIComponent that has been declared in the facelet
-		int id = (Integer) attributes.get("erpProductId");
+		long id = (Long) attributes.get("erpProductId");
 		logger.info("validateUnitsUpdate(): id of product is: " + id);
 
 		/*

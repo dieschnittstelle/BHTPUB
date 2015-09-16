@@ -212,7 +212,7 @@ public class ShoppingSessionViewController implements Serializable {
 		logger.info("validateUnitsUpdate(): attributes are: " + attributes);
 		// the id of the product to be updated can be obtained from the
 		// attributes on the UIComponent that has been declared in the facelet
-		int id = (Integer) attributes.get("erpProductId");
+		long id = (Long) attributes.get("erpProductId");
 		logger.info("validateUnitsUpdate(): id of product is: " + id);
 
 		/*
