@@ -26,7 +26,8 @@
 		<description></description>
 		<display-name>TouchpointGUIServlet</display-name>
 		<servlet-name>TouchpointGUIServlet</servlet-name>
-		<servlet-class>org.dieschnittstelle.jee.esa.servlets.TouchpointGUIServlet</servlet-class>
+		<servlet-class>org.dieschnittstelle.jee.esa.servlets.TouchpointGUIServlet</servlet-class>		
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>TouchpointGUIServlet</servlet-name>

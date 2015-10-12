@@ -36,7 +36,7 @@ public class HttpTrafficLoggingFilter implements Filter {
 	 * constructor for lifecycle logging
 	 */
 	public HttpTrafficLoggingFilter() {
-		logger.info("HttpTrafficLoggingFilter()");
+		System.err.println("HttpTrafficLoggingFilter: constructor invoked\n");		
 	}
 	
 	@Override
@@ -47,6 +47,8 @@ public class HttpTrafficLoggingFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
+		System.err.println("HttpTrafficLoggingFilter: doFilter() invoked\n");
+		
 		logger.info("doFilter(): " + request + ", " + response + ", " + chain);
 		
 		// obtain the servlet context

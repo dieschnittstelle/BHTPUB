@@ -13,7 +13,7 @@ public class TouchpointServletContextListener implements ServletContextListener 
 			.getLogger(TouchpointServletContextListener.class);
 
 	public TouchpointServletContextListener() {
-		System.err.println("TouchpointServletContextListener: constructor invoked\n");
+		System.err.println("\nTouchpointServletContextListener: constructor invoked\n");
 	}
 
 	@Override
