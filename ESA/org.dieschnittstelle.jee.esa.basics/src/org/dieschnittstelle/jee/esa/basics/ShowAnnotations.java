@@ -4,6 +4,8 @@ package org.dieschnittstelle.jee.esa.basics;
 import org.dieschnittstelle.jee.esa.basics.annotations.AnnotatedStockItemBuilder;
 import org.dieschnittstelle.jee.esa.basics.annotations.StockItemProxyImpl;
 
+import static org.dieschnittstelle.jee.esa.shared.lib.Util.*;
+
 public class ShowAnnotations {
 
 	public static void main(String[] args) {
@@ -28,7 +30,7 @@ public class ShowAnnotations {
 	 * UE BAS2 
 	 */
 	private static void showAttributes(Object consumable) {
-
+		show("class is: " + consumable.getClass());
 	}
 
 }
