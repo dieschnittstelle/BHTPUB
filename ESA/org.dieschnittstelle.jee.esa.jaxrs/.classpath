@@ -61,5 +61,6 @@
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.dieschnittstelle.jee.esa.shared.entities.crm"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.dieschnittstelle.jee.esa.shared.entities.erp"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.dieschnittstelle.jee.esa.shared.lib"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
