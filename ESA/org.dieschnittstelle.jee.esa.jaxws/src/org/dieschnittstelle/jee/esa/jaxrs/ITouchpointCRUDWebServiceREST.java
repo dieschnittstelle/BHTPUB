@@ -27,8 +27,12 @@ public interface ITouchpointCRUDWebServiceREST {
 	
 	@DELETE
 	@Path("/{touchpointId}")
-	public boolean deleteTouchpoint(@PathParam("touchpointId") int id); 
-		
+	public boolean deleteTouchpoint(@PathParam("touchpointId") long id); 
+	
+	@GET
+	@Path("/{touchpointId}")
+	public StationaryTouchpoint readTouchpoint(@PathParam("touchpointId") long id);
+	
 	/*
 	 * UE JRS: add a new annotated method for using the updateTouchpoint functionality of TouchpointCRUDExecutor and implement it
 	 */

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.NotFoundException;
 import javax.ws.rs.core.Context;
 
 import org.jboss.logging.Logger;
@@ -45,10 +46,22 @@ public class TouchpointCRUDWebServiceRESTImpl implements ITouchpointCRUDWebServi
 	}
 
 	@Override
-	public boolean deleteTouchpoint(int id) {
+	public boolean deleteTouchpoint(long id) {
 		return this.touchpointCRUD.deleteObject(id);	
 	}
 
+
+	@Override
+	public StationaryTouchpoint readTouchpoint(long id) {
+		StationaryTouchpoint tp = (StationaryTouchpoint) this.touchpointCRUD.readObject(id);	
+		if (tp != null) {
+			return tp;
+		}
+		else {
+			throw new NotFoundException("the touchpoint with id " + id + " does not exist!");
+		}
+	}
+	
 	/*
 	 * UE JRS: implement the method for updating touchpoints
 	 */
