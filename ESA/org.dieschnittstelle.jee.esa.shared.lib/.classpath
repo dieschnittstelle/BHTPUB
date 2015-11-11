@@ -9,5 +9,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="lib" path="lib/commons-lang-2.6.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jackson-all-1.7.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jackson-annotations-2.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
