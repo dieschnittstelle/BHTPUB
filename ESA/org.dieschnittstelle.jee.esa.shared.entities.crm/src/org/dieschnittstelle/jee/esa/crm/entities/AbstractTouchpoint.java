@@ -48,6 +48,7 @@ import org.dieschnittstelle.jee.esa.entities.GenericCRUDEntity;
 
 // jaxrs/jackson annotations
 //@JsonTypeInfo(use=JsonTypeInfo.Id.CLASS, include=JsonTypeInfo.As.PROPERTY, property="@class")
+//@com.fasterxml.jackson.annotation.JsonTypeInfo(use=com.fasterxml.jackson.annotation.JsonTypeInfo.Id.CLASS, include=com.fasterxml.jackson.annotation.JsonTypeInfo.As.PROPERTY, property="@class")
 public abstract class AbstractTouchpoint implements Serializable, GenericCRUDEntity {
 
 	/**
