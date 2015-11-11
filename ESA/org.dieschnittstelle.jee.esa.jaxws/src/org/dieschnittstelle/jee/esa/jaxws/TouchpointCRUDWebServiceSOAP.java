@@ -17,6 +17,8 @@ import org.dieschnittstelle.jee.esa.crm.entities.StationaryTouchpoint;
 import org.dieschnittstelle.jee.esa.entities.GenericCRUDExecutor;
 import org.jboss.logging.Logger;
 
+import static org.dieschnittstelle.jee.esa.shared.lib.Util.*;
+
 @WebService(targetNamespace = "http://dieschnittstelle.org/jee/esa/jaxws", serviceName = "TouchpointCRUDWebService")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.WRAPPED)
 public class TouchpointCRUDWebServiceSOAP {
