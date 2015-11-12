@@ -1,0 +1,1 @@
+use this directory as output directory for wsconsume
