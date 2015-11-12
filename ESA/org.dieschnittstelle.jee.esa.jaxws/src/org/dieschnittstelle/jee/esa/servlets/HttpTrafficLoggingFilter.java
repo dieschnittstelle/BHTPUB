@@ -21,7 +21,7 @@ import org.jboss.logging.Logger;
  * @author joern
  *
  */
-//@WebFilter("/*")
+@WebFilter("/*")
 public class HttpTrafficLoggingFilter implements Filter {
 
 	/**
