@@ -8,8 +8,6 @@ import javax.naming.InitialContext;
 import org.dieschnittstelle.jee.esa.erp.ejbs.StockSystemRemote;
 import org.dieschnittstelle.jee.esa.erp.entities.IndividualisedProductItem;
 
-import org.diesch
-
 public class StockSystemClient implements StockSystemRemote {
 
 	private StockSystemRemote proxy;
